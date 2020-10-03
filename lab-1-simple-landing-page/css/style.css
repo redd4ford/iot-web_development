@@ -1,0 +1,357 @@
+  /* ----------------------------------------------- */
+  /*                  PAGE ELEMENTS                  */
+  /* ----------------------------------------------- */
+
+
+  html {
+    box-sizing: border-box;
+
+    font-size: 100%;
+  }
+  
+  body {
+    margin: auto;
+
+    background-color: #FEF8F5;
+  }
+  
+  header {
+    position: relative;
+
+    margin-bottom: 10%;
+
+    background-image: url(../img/header\ image.svg);
+    background-repeat: no-repeat;
+    background-position-x: -50%;
+    background-position-y: -60px;
+  }
+
+  .container {
+    margin: auto;
+    width: 75%;
+  }
+
+  section {
+    display: flex; 
+    justify-content: space-between;
+
+    margin-bottom: 10%;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 12.81rem;
+    margin: auto;
+    padding: auto;
+
+    background-color: #F16353;
+  }
+
+
+  /* ----------------------------------------------- */
+  /*                     GENERAL                     */
+  /* ----------------------------------------------- */
+
+
+  .btn {
+    color: #FFFFFF;
+    background-color: #EE4D47;
+    border: none;
+    border-radius: 0.312rem;
+
+    font-family: 'Rubik', serif;
+    font-weight: bold;
+    font-size: 0.875rem;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.19rem;
+
+    cursor: pointer;
+  }
+
+  .centered-title {
+    text-align: center;
+  }
+
+  h1 {
+    color: #FFFFFF;
+
+    font-family: 'DM Serif Display', serif;
+    font-weight: lighter;
+    font-size: 6.25rem;
+    line-height: 6.25rem;
+  }
+
+  h2 {
+    color: #402B2B;
+
+    font-family: 'DM Serif Display', serif;
+    font-weight: lighter;
+    font-size: 3rem;
+    line-height: 4.06rem;
+  }
+
+  h3 {
+    color: #EE4D47;
+
+    font-family: 'Rubik', serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    line-height: 2.5rem;
+    letter-spacing: 0.09rem;
+  }
+
+  
+  /* ----------------------------------------------- */
+  /*                   HEADER NAV                    */
+  /* ----------------------------------------------- */
+
+
+  .header-panel {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    height: 3.12rem;
+    width: 71%;
+    margin: auto;
+    margin-bottom: 9.4rem;
+  }
+
+  .header-logo, .header-nav {
+    margin-top: 3.125rem;
+  }
+
+  .header-nav {
+    width: 53%;
+
+    line-height: 3.75rem;
+  }
+
+  .header-nav ul {
+    display: flex;
+    flex-direction: row;  
+    justify-content: space-between;
+
+    margin: auto;
+    padding: 0;
+
+    list-style-type: none;
+  }
+
+  .header-nav a:link, a:visited {
+    color: #FFFFFF;
+
+    font-family: 'Rubik', serif;
+    font-weight: bold;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .header-nav-button {
+    width: 9.875rem;
+  }
+
+
+  /* ----------------------------------------------- */
+  /*                   HEADER HERO                   */
+  /* ----------------------------------------------- */
+
+
+  .header-hero {
+    margin: auto;
+    width: 71.25%;
+  }
+
+  .header-hero-text {
+    width: 46.25rem;
+  }
+
+  .header-hero-button {
+    display: flex;
+    align-items: center;
+
+    height: 3.75rem;
+    margin: 0;
+    padding: 1rem 2.2rem;
+
+    letter-spacing: 5%;
+  }
+
+  .header-hero-button-arrow {
+    height: 0.75rem;
+    width: 1.8rem;
+    margin-left: 1.5rem;
+
+    background-image: url(../img/arrow.svg);
+  }
+
+
+  /* ----------------------------------------------- */
+  /*                       CAR                       */
+  /* ----------------------------------------------- */
+
+  .car-image {
+    position: relative;
+
+    margin-top: 3.125rem;
+    margin-left: -12.5rem;
+  }
+
+
+  /* ----------------------------------------------- */
+  /*                     ARTICLE                     */
+  /* ----------------------------------------------- */
+
+
+  .article-left-sided, .article-right-sided {
+    display: flex; 
+    justify-content: space-between;
+
+    margin-bottom: 10%;
+  }
+
+  .article-left-sided {
+    flex-direction: row;
+  }
+
+  .article-right-sided {
+    flex-direction: row-reverse;
+  }
+
+  .article-content {
+    max-width: 40%;
+
+    font-family: 'Rubik', serif;
+  }
+
+  .article-text {
+    color: #402B2B;
+
+    font-weight: lighter;
+    font-size: 1.125rem;
+    line-height: 2.5rem;
+  }
+
+  .article-quote {
+    width: 100%;
+    margin: auto;
+    margin-top: 10%;
+    padding: 1.875rem;
+
+    color: #402B2B;
+    background-color: #FCDDD4;
+    border-radius: 0.3rem 0 0 0.3rem;
+    border-left: #ED4D47 solid 0.625rem;
+
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+  }
+  
+  .article-img-right {
+    margin-top: -7.5rem;
+    margin-left: -7.5rem;
+  }
+
+
+  /* ----------------------------------------------- */
+  /*                     CLIENTS                     */
+  /* ----------------------------------------------- */
+
+
+  .clients {
+    max-width: 85%;
+    margin: auto;
+    margin-bottom: 12%;
+  }
+
+  .clients-panel {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .clients-panel-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    height: 22.5rem;
+    width: 26.25rem;
+
+    background-color: #FFFFFF;
+    border-radius: 0.625rem;
+    box-shadow: 0 1.25rem 2.5rem rgba(238, 77, 71, 0.1);
+  }
+
+  .clients-panel-item-text {
+    margin: auto;
+    width: 20rem;
+
+    color: #402B2B;
+
+    font-family: 'Rubik', serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 187%;
+  }
+
+  .clients-panel-item-author {
+    display: flex;
+    align-items: center;
+    
+    max-height: 3.75rem;
+    width: 20rem;
+    margin: auto;
+  }
+
+  .clients-panel-item-author-name {
+    margin-left: 1.25rem;
+
+    color: #402B2B;
+
+    font-family: 'Roboto', serif;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 187%;
+  }
+
+
+  /* ----------------------------------------------- */
+  /*                     FOOTER                      */
+  /* ----------------------------------------------- */
+
+
+  .footer-copyright {
+    color: #F8F9FA;
+
+    font-family: 'Rubik', serif;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.875rem;
+  }
+
+  .footer-logo {
+    height: 3.125rem;
+    width: 13.25rem;
+
+    background-image: url(../img/logo.svg);
+  }
+
+  .footer-social {
+    display: flex;
+    justify-content: space-between;
+
+    width: 10.625rem;
+  }
+
+  .footer-social-btn {
+    height: 36px;
+    width: 36px;
+  }
