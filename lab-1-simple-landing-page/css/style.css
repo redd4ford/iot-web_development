@@ -28,14 +28,14 @@
 
   .container {
     margin: auto;
-    width: 75%;
+    width: 70%;
   }
 
   section {
     display: flex; 
     justify-content: space-between;
 
-    margin-bottom: 10%;
+    margin-top: 15%;
   }
 
   footer {
@@ -103,6 +103,8 @@
     text-transform: uppercase;
     line-height: 2.5rem;
     letter-spacing: 0.09rem;
+
+    margin-bottom: 40px;
   }
 
   
@@ -127,6 +129,8 @@
   }
 
   .header-nav {
+    position: relative;
+
     width: 53%;
 
     line-height: 3.75rem;
@@ -213,7 +217,7 @@
     display: flex; 
     justify-content: space-between;
 
-    margin-bottom: 10%;
+    margin-bottom: 2%;
   }
 
   .article-left-sided {
@@ -228,6 +232,10 @@
     max-width: 40%;
 
     font-family: 'Rubik', serif;
+  }
+
+  .article-right-sided .article-content {
+    max-width: 42%;
   }
 
   .article-text {
@@ -274,6 +282,7 @@
   .clients-panel {
     display: flex;
     justify-content: space-between;
+    margin-top: 5%;
   }
 
   .clients-panel-item {
