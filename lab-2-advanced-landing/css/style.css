@@ -1,0 +1,115 @@
+  /* ----------------------------------------------- */
+  /*                     GENERAL                     */
+  /* ----------------------------------------------- */
+
+  /* ----------------------------------------------- */
+  /*     COMMON FOR ALL SIZES - IF NOT OVERRIDEN     */
+
+  
+  @media screen and (min-width: 0px) {
+    .btn {
+      color: #FFFFFF;
+      background-color: #EE4D47;
+      border: none;
+      border-radius: 0.312rem;
+
+      font-family: 'Rubik', serif;
+      font-weight: bold;
+      font-size: 0.875rem;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 1.19rem;
+
+      cursor: pointer;
+    }
+
+    .centered-title {
+      text-align: center;
+    }
+
+    h1 {
+      color: #FFFFFF;
+
+      font-family: 'DM Serif Display', serif;
+      font-weight: lighter;
+      font-size: 6.25rem;
+      line-height: 6.25rem;
+    }
+
+    h2 {
+      color: #402B2B;
+
+      font-family: 'DM Serif Display', serif;
+      font-weight: lighter;
+      font-size: 3rem;
+      line-height: 4.06rem;
+    }
+
+    h3 {
+      color: #EE4D47;
+
+      font-family: 'Rubik', serif;
+      font-weight: bold;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      line-height: 2.5rem;
+      letter-spacing: 0.09rem;
+
+      margin-bottom: 40px;
+    }
+  }
+
+
+  /* ----------------------------------------------- */
+  /*        480 PX MAX -- SMALLER SMARTPHONES        */
+
+
+  @media screen and (max-width: 480px) {
+    .header-hero-text h1 {
+      font-size: 3.25rem;
+      line-height: 4.5rem;
+    }
+
+    .clients h2 {
+      font-size: 1.75rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+    }
+  }
+
+
+  /* ----------------------------------------------- */
+  /*    768 PX MAX -- TABLETS & LARGER SMARTPHONES   */
+
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    .header-hero-text h1 {
+      font-size: 5.5rem;
+    }
+
+    h3 {
+      font-size: 1.75rem;
+    }
+  }
+
+
+  /* ----------------------------------------------- */
+  /*     1279 PX MAX -- LAPTOPS & SMALL DESKTOPS     */
+
+
+  @media screen and (min-width: 769px) and (max-width: 1279px) {
+  }
+
+
+  /* ----------------------------------------------- */
+  /*      1280+ PX -- LARGER DESKTOPS & MONITORS     */
+
+
+  @media screen and (width: 2560px) {
+    .header-hero-text h1 {
+      font-size: 3.5rem;
+    }
+  }
+

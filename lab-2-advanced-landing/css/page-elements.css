@@ -1,0 +1,220 @@
+  /* ----------------------------------------------- */
+  /*                  PAGE ELEMENTS                  */
+  /* ----------------------------------------------- */
+
+  /* ----------------------------------------------- */
+  /*     COMMON FOR ALL SIZES - IF NOT OVERRIDEN     */
+
+
+  @media screen and (min-width: 0px) {
+    html {
+      box-sizing: border-box;
+  
+      font-size: 100%;
+    }
+
+    header {
+      position: relative;
+      
+      margin-bottom: 10%;
+      width: 100%;
+      max-width: 100%;
+  
+      background-image: url(../img/header\ image.svg);
+      background-repeat: no-repeat;
+      background-position-x: -50%;
+      background-position-y: -60px;
+    }
+  
+    .container {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    section {
+      display: flex; 
+      flex-direction: column;
+      justify-content: space-between;
+  
+      margin-top: 15%;
+    }
+
+    .clients {
+      max-width: 85%;
+      margin: auto;
+      margin-bottom: 12%;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  
+      height: 12.81rem;
+      margin: auto;
+      padding: auto;
+  
+      background-color: #F16353;
+    }
+    
+  }
+
+
+  /* ----------------------------------------------- */
+  /*     COMMON UNTIL 1000 PX - IF NOT OVERRIDEN     */
+
+
+  @media screen and (max-width: 1000px) {
+    header {
+      background-position-x: 5%;
+    }
+  }
+
+
+  /* ----------------------------------------------- */
+  /*     COMMON UNTIL 1279 PX - IF NOT OVERRIDEN     */
+
+
+  @media screen and (max-width: 1279px) {
+    header {
+      background-size: cover;
+    }
+
+    .clients {
+      flex-direction: column;
+
+      margin-bottom: 10%;
+    }
+
+    footer {
+      flex-direction: column;
+    }
+  }
+
+
+  /* ----------------------------------------------- */
+  /*        480 PX MAX -- SMALLER SMARTPHONES        */
+
+
+  @media screen and (max-width: 480px) {
+  }
+
+
+  /* ----------------------------------------------- */
+  /*    768 PX MAX -- TABLETS & LARGER SMARTPHONES   */
+
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    header {
+      background-position-y: -70px;
+    }
+  }
+
+
+  /* ----------------------------------------------- */
+  /*     1279 PX MAX -- LAPTOPS & SMALL DESKTOPS     */
+
+
+  @media screen and (min-width: 769px) and (max-width: 1000px) {
+    header {
+      background-position-y: -75px;
+    }
+  }
+
+  @media screen and (min-width: 1001px) and (max-width: 1279px) {
+    header {
+      background-position-x: 39%;
+      background-position-y: -65px;
+    }
+  }
+
+
+  /* ----------------------------------------------- */
+  /*      COMMON 1280-2560 PX - IF NOT OVERRIDEN     */
+
+
+  @media screen and (min-width: 1280px) and (max-width: 2560px) {
+    header {
+      background-position-x: 11%;
+    }
+
+    .clients {
+      width: 95%;
+      margin: auto;
+      margin-bottom: 12%;
+    }
+
+    .container {
+      margin: auto;
+      width: 70%;
+    }
+
+    section {
+      flex-direction: row;
+    }
+  }
+
+
+  /* ----------------------------------------------- */
+  /*      1280+ PX -- LARGER DESKTOPS & MONITORS     */
+
+  /* 1280-1399 */
+  @media screen and (min-width: 1280px) and (max-width: 1399px) {
+  }
+
+  /* 1400-1599 */
+  @media screen and (min-width: 1400px) and (max-width: 1599px) {
+    header {
+      background-position-x: -10%;
+    }
+  }
+
+  /* 1600-1699 */
+  @media screen and (min-width: 1600px) and (max-width: 1699px) {
+    header {
+      background-position-x: -68%;
+    }
+  }
+
+  /* 1700-1899 */
+  @media screen and (min-width: 1700px) and (max-width: 1899px) {
+    header {
+      background-position-x: 580%;
+    }
+  }
+
+  /* 1900-2559 */
+  @media screen and (min-width: 1900px) and (max-width: 2559px) {
+    header {
+      background-position-x: 130%;
+      background-position-y: -100px;
+    }
+
+    body {
+      margin: auto;
+  
+      background-color: #FEF8F5;
+    }
+  
+    .container {
+      width: 65%;
+    }
+  }
+
+  /* 2560 */
+  @media screen and (width: 2560px) {
+    header {
+      background-position-x: 75%;
+      background-position-y: -100px;
+    }
+
+    body {
+      margin: auto;
+  
+      background-color: #FEF8F5;
+    }
+  
+    .container {
+      width: 50%;
+    }
+  }

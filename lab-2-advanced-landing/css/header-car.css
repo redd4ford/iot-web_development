@@ -1,0 +1,115 @@
+  /* ----------------------------------------------- */
+  /*                       CAR                       */
+  /* ----------------------------------------------- */
+
+  /* ----------------------------------------------- */
+  /*     COMMON FOR ALL SIZES - IF NOT OVERRIDEN     */
+
+
+  @media screen and (min-width: 0px) {
+    .car-image {
+      position: relative;
+
+      margin-top: 3.125rem;
+      margin-left: -12.5rem;
+    }
+
+    .car-image img {
+      width: 100%;
+    }
+  }
+
+
+  /* ----------------------------------------------- */
+  /*        480 PX MAX -- SMALLER SMARTPHONES        */
+
+
+  @media screen and (max-width: 480px) {
+    .car-image {
+        margin-top: 4.5rem;
+      }
+  
+    .car-image img {
+        height: 251px;
+    }
+  }
+
+
+  /* ----------------------------------------------- */
+  /*    768 PX MAX -- TABLETS & LARGER SMARTPHONES   */
+
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    .car-image {
+        margin-top: 6.25rem;
+        margin-left: -25.5rem;
+      }
+    
+    .car-image img {
+      height: 350px;
+    }
+   }
+  
+
+  /* ----------------------------------------------- */
+  /*     COMMON UNTIL 2560 PX - IF NOT OVERRIDEN     */
+
+  @media screen and (min-width: 769px) {
+    .car-image {
+      margin-top: 7.25rem;
+    }
+
+    .car-image img {
+      height: 400px;
+    }
+  }
+
+
+  /* ----------------------------------------------- */
+  /*     1279 PX MAX -- LAPTOPS & SMALL DESKTOPS     */
+
+
+  @media screen and (min-width: 769px) and (max-width: 1000px) {
+    .car-image {
+      margin-left: -28rem;
+    }
+  }
+
+  @media screen and (min-width: 1001px) and (max-width: 1279px) {
+    .car-image {
+        margin-left: -40rem;
+      }
+  }
+  
+
+  /* ----------------------------------------------- */
+  /*      1280+ PX -- LARGER DESKTOPS & MONITORS     */
+
+  /* 1280-1899 */
+  @media screen and (min-width: 1280px) {
+    .car-image {
+      margin-top: 1.75rem;
+      margin-left: -73rem;
+    }
+
+    .car-image img {
+      width: 100%;
+    }
+  }
+
+  /* 1900-2560 */
+  @media screen and (min-width: 1900px) and (max-width: 2559px) {
+    .car-image {
+      margin-top: 0rem;
+      margin-left: -90rem;
+    }
+  }
+
+  /* 2560 */
+  @media screen and (width: 2560px) {
+    .car-image {
+      margin-top: -5rem;
+      margin-left: -80rem;
+    }
+  }
+  

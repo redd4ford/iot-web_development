@@ -1,0 +1,92 @@
+  /* ----------------------------------------------- */
+  /*                     FOOTER                      */
+  /* ----------------------------------------------- */
+
+  /* ----------------------------------------------- */
+  /*     COMMON FOR ALL SIZES - IF NOT OVERRIDEN     */
+
+
+  @media screen and (min-width: 0px) {
+    .footer-copyright {
+      color: #F8F9FA;
+  
+      font-family: 'Rubik', serif;
+      font-weight: bold;
+      font-size: 1rem;
+      line-height: 1.875rem;
+    }
+  
+    .footer-logo {
+      height: 3.125rem;
+      width: 13.25rem;
+  
+      background-image: url(../img/logo.svg);
+    }
+  
+    .footer-social {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+  
+      width: 10.625rem;
+    }
+  
+    .footer-social-btn {
+      height: 36px;
+      width: 36px;
+    }
+  }
+
+
+  /* ----------------------------------------------- */
+  /*      COMMON UNTIL 768 PX - IF NOT OVERRIDEN     */
+
+
+  @media screen and (min-width: 0px) and (max-width: 768px) {
+    .footer-copyright {
+      margin-bottom: 10px;
+
+      font-size: 0.75rem;
+    }
+
+    .footer-social {
+      width: 15rem;
+      margin-top: 10px;
+    }
+  }
+
+
+  /* ----------------------------------------------- */
+  /*        480 PX MAX -- SMALLER SMARTPHONES        */
+
+
+  @media screen and (max-width: 480px) {
+  }
+
+
+  /* ----------------------------------------------- */
+  /*    768 PX MAX -- TABLETS & LARGER SMARTPHONES   */
+
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    .footer-copyright {
+      font-size: 0.75rem;
+    }
+  }
+
+
+  /* ----------------------------------------------- */
+  /*     1279 PX MAX -- LAPTOPS & SMALL DESKTOPS     */
+
+
+  @media screen and (min-width: 769px) and (max-width: 1279px) {
+  }
+
+
+  /* ----------------------------------------------- */
+  /*      1280+ PX -- LARGER DESKTOPS & MONITORS     */
+
+
+  @media screen and (min-width: 1280px) {
+  }
+
