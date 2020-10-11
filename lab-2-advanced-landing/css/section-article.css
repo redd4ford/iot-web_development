@@ -64,6 +64,16 @@
       margin-top: -7.5rem;
       margin-left: -7.5rem;
     }
+
+    .article-img-left img {
+      -webkit-animation: floating 2.5s linear infinite;
+      animation: floating 2.5s linear infinite;
+    }
+
+    .article-img-right img {
+      -webkit-animation: floating 2.5s linear 1s infinite;
+      animation: floating 2.5s linear 1s infinite;
+    }
   }
 
 

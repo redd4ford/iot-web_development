@@ -53,8 +53,11 @@
       height: 12.81rem;
       margin: auto;
       padding: auto;
-  
-      background-color: #F16353;
+
+      background: #F16353;
+
+      -webkit-animation: color-change-2x 5s linear infinite;
+      animation: color-change-2x 5s linear infinite;
     }
     
   }

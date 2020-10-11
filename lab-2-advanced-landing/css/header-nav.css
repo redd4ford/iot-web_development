@@ -20,6 +20,12 @@
   
     .header-logo, .header-nav {
       margin-top: 3rem;
+
+    }
+
+    .header-logo {
+      -webkit-animation: slide-in-top 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      animation: slide-in-top 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
   
     .header-nav {
@@ -30,7 +36,7 @@
       line-height: 3.75rem;
     }
   
-    .header-nav ul {
+    .header-nav .nav-list {
       display: flex;
       flex-direction: row;  
       justify-content: space-between;
@@ -54,16 +60,113 @@
     .header-nav-button {
       width: 9.875rem;
     }
+
+    .hamburger-toggle {
+      float: right;
+
+      visibility: hidden;
+    }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      float: right;
+
+      height: 100%;
+    }
+    
+    .hamburger-items {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-end;
+      
+      visibility: hidden;
+    }
+
+    .hamburger-items:target {
+      position: absolute;
+
+      margin-top: 200px;
+      width: 100%;
+      height: 100%;
+
+      visibility: visible;
+    }
+
+    .hamburger-items ul {
+      position: relative;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      width: 100%;
+      padding: 1em;
+
+      background-color: rgba(107, 51, 46, 0.9);
+    }
+
+    .hamburger-items ul li {
+      width: 100%;
+
+      border-bottom: 2px rgb(87, 29, 24) solid;
+    }
+
+    .hamburger-items .close::after {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+
+      right: -1rem;
+      top: -3rem;
+      width: 2rem;
+      height: 2rem;
+      padding: 35px 1px;
+
+      z-index: 1;
+ 
+      background-color:  rgb(67, 9, 4);
+      border-radius: 10%;
+      color: white;
+
+      content: "×";
+      font-size: 2rem;
+      
+      cursor: pointer;
+    }
+    
+    .hamburger-items .close::before {
+      position: fixed;
+
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+ 
+      background-color: rgba(2,0,0,.7);
+      
+      content: "";
+      
+      cursor: default;
+    }
   }
 
 
   /* ----------------------------------------------- */
-  /*     COMMON UNTIL 768 PX -- IF NOT OVERRIDEN     */
+  /*     COMMON UNTIL 900 PX -- IF NOT OVERRIDEN     */
 
 
-  @media screen and (max-width: 768px) {
-    .header-nav ul {
+  @media screen and (max-width: 900px) {
+    .header-nav .nav-list {
       display: none;
+    }
+
+    .hamburger-toggle {
+      visibility: visible;
     }
   }
 
@@ -87,6 +190,9 @@
 
   
   @media screen and (max-width: 480px) {
+    .header-logo {
+      display: none;
+    }
   }
 
 
@@ -119,6 +225,16 @@
   @media screen and (min-width: 1280px) {
     .header-nav a:link, a:visited {
       font-size: 1rem;
+    }
+    
+    .header-panel {
+      width: 90%;
+    }
+  }
+
+  @media screen and (min-width: 1400px) {
+    .header-panel {
+      width: 80%;
     }
   }
 
