@@ -10,7 +10,8 @@
 
     <link rel="icon" type="image/x-icon" sizes="16x16" href="favicon.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto:wght@700&family=Rubik:wght@300;500;700&display=swap">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!--   CROSS-BROWSER SUPPORT LIBS   -->
     
     <link rel="stylesheet" href="css/cross-browser/reset.css">
@@ -26,6 +27,7 @@
     <link rel="stylesheet" href="css/section-article.css">
     <link rel="stylesheet" href="css/section-clients.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/animation.css">
   </head>
 
   <body>
@@ -42,12 +44,37 @@
         </div>
         
         <nav class="header-nav">
-            <ul>
-              <li><a href="#">about</a></li>
-              <li><a href="#">how to</a></li>
-              <li><a href="#">faqs</a></li>
-              <button class="header-nav-item btn header-nav-button">contact us</button>
-            </ul>
+          <div class="hamburger">
+            <a href="#menu-open"
+              class="hamburger-toggle"
+              onclick="window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+              });">
+              <span class="fa fa-bars fa-3x"></span>
+            </a>
+            <div class="hamburger-items" id="menu-open">
+              <a href="#" class="close"></a>
+              <ul>
+                <li><a href="#">about</a></li>
+                <li><a href="#">faqs</a></li>
+                <li><a href="#">contact us</a></li>
+                <li><a href="#">how to</a></li>
+              </ul>
+            </div>
+          </div>
+          <ul class="nav-list">
+            <li><a href="#">about</a></li>
+            <li><a href="#">how to</a></li>
+            <li><a href="#">faqs</a></li>
+            <button class="header-nav-item btn header-nav-button">contact us</button>
+          </ul>
+          <a href="#"
+             class="backdrop"
+             tabindex="-1"
+             aria-hidden="true" hidden>
+          </a>
         </nav>
       </div>
       
