@@ -1,0 +1,349 @@
+  /* ----------------------------------------------- */
+  /*                   HEADER NAV                    */
+  /* ----------------------------------------------- */
+
+  /* ----------------------------------------------- */
+  /*     COMMON FOR ALL SIZES - IF NOT OVERRIDEN     */
+
+
+  @media screen and (min-width: 0px) {
+    .header-panel {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+  
+      height: 3.12rem;
+      width: 70%;
+      margin: auto;
+      margin-bottom: 9.4rem;
+    }
+  
+    .header-logo, .header-nav {
+      margin-top: 3rem;
+
+    }
+
+    .header-logo {
+      -webkit-animation: slide-in-top 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      animation: slide-in-top 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+  
+    .header-nav {
+      position: relative;
+  
+      width: 53%;
+  
+      line-height: 3.75rem;
+    }
+  
+    .header-nav .nav-list {
+      display: flex;
+      flex-direction: row;  
+      justify-content: space-between;
+  
+      margin: auto;
+      padding: 0;
+  
+      list-style-type: none;
+    }
+  
+    .header-nav a:link, a:visited {
+      color: #FFFFFF;
+  
+      font-family: 'Rubik', serif;
+      font-weight: bold;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+  
+    .header-nav-button {
+      width: 9.875rem;
+    }
+
+    .hamburger-toggle {
+      float: right;
+
+      visibility: hidden;
+    }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      float: right;
+
+      height: 100%;
+    }
+    
+    .hamburger-items {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-end;
+      
+      visibility: hidden;
+    }
+
+    .hamburger-items:target {
+      position: absolute;
+
+      margin-top: 200px;
+      width: 100%;
+      height: 100%;
+
+      visibility: visible;
+    }
+
+    .hamburger-items ul {
+      position: relative;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      width: 100%;
+      padding: 1em;
+
+      background-color: rgba(107, 51, 46, 0.9);
+    }
+
+    .hamburger-items ul li {
+      width: 100%;
+
+      border-bottom: 2px rgb(87, 29, 24) solid;
+    }
+
+    .hamburger-items .close::after {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+
+      right: -1rem;
+      top: -3rem;
+      width: 2rem;
+      height: 2rem;
+      padding: 35px 1px;
+
+      z-index: 1;
+ 
+      background-color:  rgb(67, 9, 4);
+      border-radius: 10%;
+      color: white;
+
+      content: "×";
+      font-size: 2rem;
+      
+      cursor: pointer;
+    }
+    
+    .hamburger-items .close::before {
+      position: fixed;
+
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+ 
+      background-color: rgba(2,0,0,.7);
+      
+      content: "";
+      
+      cursor: default;
+    }
+  }
+
+
+  /* ----------------------------------------------- */
+  /*     COMMON UNTIL 900 PX -- IF NOT OVERRIDEN     */
+
+
+  @media screen and (max-width: 900px) {
+    .header-nav .nav-list {
+      display: none;
+    }
+
+    .hamburger-toggle {
+      visibility: visible;
+    }
+  }
+
+
+  /* ----------------------------------------------- */
+  /*    COMMON UNTIL 1279 PX -- IF NOT OVERRIDEN     */
+
+
+  @media screen and (max-width: 1279px) {
+    .header-panel {
+      justify-content: space-around;
+
+      width: 80%;
+      margin-bottom: 6rem;
+    }
+  }
+
+
+  /* ----------------------------------------------- */
+  /*        480 PX MAX -- SMALLER SMARTPHONES        */
+
+  
+  @media screen and (max-width: 480px) {
+    .header-logo {
+      display: none;
+    }
+  }
+
+
+  /* ----------------------------------------------- */
+  /*    768 PX MAX -- TABLETS & LARGER SMARTPHONES   */
+
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    .header-nav {
+      width: 50%;
+    }
+  }
+
+
+  /* ----------------------------------------------- */
+  /*     1279 PX MAX -- LAPTOPS & SMALL DESKTOPS     */
+  
+  /* 769-1279 */
+  @media screen and (min-width: 769px) and (max-width: 1279px) {
+    .header-panel {
+      width: 85%;
+      max-width: 100%;
+      margin-bottom: 12rem;
+    }
+
+    .header-nav {
+      width: 70%;
+    }
+  }
+
+  /* 1001-1279 */
+  @media screen and (min-width: 1001px) and (max-width: 1279px) {
+    .header-panel {
+      width: 100%;
+      margin-bottom: 12rem;
+    }
+
+    .header-nav {
+      width: 70%;
+    }
+
+    .header-nav a:link, a:visited {
+      font-size: 105%;
+    }
+  }
+
+
+  /* ----------------------------------------------- */
+  /*      1280+ PX -- LARGER DESKTOPS & MONITORS     */
+
+
+  /* 1280+ */
+  @media screen and (min-width: 1280px) {
+    .header-nav a:link, a:visited {
+      font-size: 1rem;
+    }
+    
+    .header-panel {
+      width: 90%;
+    }
+  }
+
+  /* 1400-1649 */
+  @media screen and (min-width: 1400px) and (max-width: 1649px) {
+    .header-panel {
+      width: 70%;
+    }
+
+    .header-nav {
+      width: 70%;
+    }
+  }
+
+  /* 1650-1729 */
+  @media screen and (min-width: 1650px) and (max-width: 1729px) {
+    .header-panel {
+      width: 60%;
+    }
+  }
+
+  /* 1730-1809 */
+  @media screen and (min-width: 1730px) and (max-width: 1809px) {
+    .header-panel {
+      width: 65%;
+    }
+
+    .header-nav {
+      width: 70%;
+    }
+
+    .header-nav a:link, a:visited {
+      font-size: 1.25rem;
+    }
+  }
+
+  /* 1810-1849 */
+  @media screen and (min-width: 1810px) and (max-width: 1849px) {
+    .header-panel {
+      width: 60%;
+    }
+
+    .header-nav {
+      width: 65%;
+    }
+
+    .header-nav a:link, a:visited {
+      font-size: 1.25rem;
+    }
+  }
+
+  /* 1850-1899 */
+  @media screen and (min-width: 1850px) and (max-width: 1899px) {
+    .header-panel {
+      width: 60%;
+    }
+
+    .header-nav {
+      width: 65%;
+    }
+
+    .header-nav a:link, a:visited {
+      font-size: 1.25rem;
+    }
+  }
+
+  /* 1900-2099 */
+  @media screen and (min-width: 1900px) and (max-width: 2099px) {
+    .header-panel {
+      width: 60%;
+    }
+  }
+
+  /* 2100-2299 */
+  @media screen and (min-width: 2100px) and (max-width: 2299px) {
+    .header-panel {
+      width: 50%;
+    }
+  }
+
+  /* 2300-2559 */
+  @media screen and (min-width: 2300px) and (max-width: 2559px) {
+    .header-panel {
+      width: 45%;
+    }
+  }
+
+
+  /* 2560 */
+  @media screen and (width: 2560px) {
+    .header-panel {
+      width: 45%;
+    }
+  }
+

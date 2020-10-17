@@ -1,0 +1,233 @@
+  /* ----------------------------------------------- */
+  /*                     ARTICLE                     */
+  /* ----------------------------------------------- */
+
+  /* ----------------------------------------------- */
+  /*     COMMON FOR ALL SIZES - IF NOT OVERRIDEN     */
+
+
+  @media screen and (min-width: 0px) {
+    .article-left-sided, .article-right-sided {
+      display: flex; 
+      justify-content: space-between;
+
+      margin-bottom: 2%;
+    }
+
+    .article-left-sided {
+      flex-direction: row;
+    }
+
+    .article-right-sided {
+      flex-direction: row-reverse;
+    }
+
+    .article-content {
+      max-width: 40%;
+
+      font-family: 'Rubik', serif;
+    }
+
+    .article-right-sided .article-content {
+      max-width: 42%;
+    }
+
+    .article-text {
+      color: #402B2B;
+
+      font-weight: lighter;
+      font-size: 1.125rem;
+      line-height: 2.5rem;
+    }
+
+    .article-quote {
+      position: relative;
+
+      width: 100%;
+      margin: auto;
+      margin-top: 10%;
+      padding: 2rem;
+
+      color: #402B2B;
+      background-color: #FCDDD4;
+      border-radius: 0.3rem 0 0 0.3rem;
+      border-left: #ED4D47 solid 0.625rem;
+
+      font-weight: 500;
+      font-size: 1.5rem;
+      line-height: 2.25rem;
+    }
+
+    .article-img-right {
+      position: relative;
+
+      margin-top: -7.5rem;
+      margin-left: -7.5rem;
+    }
+
+    .article-img-left img {
+      -webkit-animation: floating 2.5s linear infinite;
+      animation: floating 2.5s linear infinite;
+    }
+
+    .article-img-right img {
+      -webkit-animation: floating 2.5s linear 1s infinite;
+      animation: floating 2.5s linear 1s infinite;
+    }
+  }
+
+
+  /* ----------------------------------------------- */
+  /*     COMMON UNTIL 1024 PX - IF NOT OVERRIDEN     */
+
+  
+  @media screen and (min-width: 0px) and (max-width: 1024px) {
+    .article-left-sided, .article-right-sided {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      
+      width: 100%;
+    }
+
+    .article-right-sided .article-content {
+      width: 75%;
+      max-width: 75%;
+    }
+
+    .article-right-sided {
+      flex-direction: column;
+    }
+
+    .article-content h3 {
+      margin-bottom: 50px;
+
+      text-align: center;
+    }
+
+    .article-content {
+      margin: auto;
+      width: 75%;
+      max-width: 75%;
+
+      text-align: justify;
+    }
+
+    .article-quote {
+      width: 75%;
+      max-width: 75%;
+      margin-top: 40px;
+
+      border-radius: 0.2rem 0 0 0.2rem;
+      border-left: #ED4D47 solid 0.625rem;
+
+      font-weight: 400;
+      font-size: 1.15rem;
+      text-align: center;
+    }
+  }
+
+
+  /* ----------------------------------------------- */
+  /*        480 PX MAX -- SMALLER SMARTPHONES        */
+
+
+  @media screen and (max-width: 480px) {
+    .article-img-left {
+      margin-top: 60px;
+    }
+
+    .article-img-left img {
+      max-width: 100%;
+    }
+
+    .article-img-right {
+      max-width: 100%;
+      margin: auto;
+    }
+
+    .article-img-right img {
+      max-width: 100%;
+    }
+  }
+
+
+  /* ----------------------------------------------- */
+  /*       COMMON 481-1279 PX - IF NOT OVERRIDEN     */
+
+
+  @media screen and (min-width: 481px) and (max-width: 1279px) {
+    .article-quote {
+      border-radius: 0.5rem 0 0 0.5rem;
+
+      font-weight: 500;
+      font-size: 1.4rem;
+    }
+
+    .article-text {
+      font-size: 1.5rem;
+    }
+
+    .article-img-left {
+      margin-top: 80px;
+    }
+
+    .article-img-left img {
+      max-width: 100%;
+    }
+
+    .article-img-right {
+      margin: auto;
+      margin-top: -30px;
+      max-width: 100%;
+    }
+  }
+
+
+  /* ----------------------------------------------- */
+  /*    768 PX MAX -- TABLETS & LARGER SMARTPHONES   */
+
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    .article-img-right img {
+      max-width: 100%;
+    }
+  }
+
+
+  /* ----------------------------------------------- */
+  /*     1279 PX MAX -- LAPTOPS & SMALL DESKTOPS     */
+
+  /* 769-1000 */
+  @media screen and (min-width: 769px) and (max-width: 1000px) {
+    .article-img-left img {
+      max-width: 95%;
+    }
+
+    .article-img-right {
+      max-width: 90%;
+    }
+
+    .article-img-right img {
+      max-width: 95%;
+    }
+  }
+  
+  /* 1001-1279 */
+  @media screen and (min-width: 1001px) and (max-width: 1279px) {
+    .article-img-right {
+      max-width: 90%;
+    }
+  }
+
+
+  /* ----------------------------------------------- */
+  /*      1280+ PX -- LARGER DESKTOPS & MONITORS     */
+
+
+  @media screen and (min-width: 1280px) {
+    .article-img-right {
+      max-width: 90%;
+    }
+  }
+
