@@ -57,6 +57,7 @@
   /* ----------------------------------------------- */
   /*     COMMON UNTIL 2560 PX - IF NOT OVERRIDEN     */
 
+
   @media screen and (min-width: 769px) {
     .car-image {
       margin-top: 7.25rem;
@@ -71,13 +72,14 @@
   /* ----------------------------------------------- */
   /*     1279 PX MAX -- LAPTOPS & SMALL DESKTOPS     */
 
-
+  /* 769-1000 */
   @media screen and (min-width: 769px) and (max-width: 1000px) {
     .car-image {
       margin-left: -28rem;
     }
   }
 
+  /* 1001-1279 */
   @media screen and (min-width: 1001px) and (max-width: 1279px) {
     .car-image {
         margin-left: -40rem;
@@ -101,18 +103,10 @@
   }
 
   /* 1900-2560 */
-  @media screen and (min-width: 1900px) and (max-width: 2559px) {
+  @media screen and (min-width: 1900px) and (max-width: 2560px) {
     .car-image {
       margin-top: 0rem;
       margin-left: -90rem;
     }
   }
 
-  /* 2560 */
-  @media screen and (width: 2560px) {
-    .car-image {
-      margin-top: -5rem;
-      margin-left: -80rem;
-    }
-  }
-  

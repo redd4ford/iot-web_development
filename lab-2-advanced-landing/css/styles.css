@@ -1,0 +1,28 @@
+/*        HELPER       */
+
+@import "./cross-browser/normalize.css";
+@import "./cross-browser/reset.css";
+
+/*    GLOBAL/COMMON    */
+
+@import "./animation.css";
+@import "./global.css";
+
+/*      STRUCTURE      */
+
+@import "./page-elements.css";
+
+/*        HEADER       */
+
+@import "./header-nav.css";
+@import "./header-hero.css";
+@import "./header-car.css";
+
+/*       SECTIONS      */
+
+@import "./section-article.css";
+@import "./section-clients.css";
+
+/*        FOOTER       */
+
+@import "./footer.css";

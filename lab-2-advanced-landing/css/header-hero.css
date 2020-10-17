@@ -8,12 +8,11 @@
   @media screen and (min-width: 0px) {
     .header-hero {
       margin: auto;
-      width: 71.25%;
+      width: 70%;
     }
 
     .header-hero-text {
       width: 46.25rem;
-
     }
 
     .header-hero-button {
@@ -69,7 +68,7 @@
   /* ----------------------------------------------- */
   /*         481-1279 PX -- IF NOT OVERRIDEN         */
 
-
+  /* 481-1279 */
   @media screen and (min-width: 481px) and (max-width: 1279px) {
     .header-hero-text {
       width: 100%;
@@ -79,6 +78,19 @@
       justify-content: center;
       
       width: 55%;
+    }
+  }
+
+  /* 1001-1279 */
+  @media screen and (min-width: 1001px) and (max-width: 1279px) {
+    .header-hero {
+      width: 80%;
+    }
+
+    .header-hero-button {
+      justify-content: center;
+      
+      width: 35%;
     }
   }
 
@@ -109,12 +121,14 @@
   @media screen and (min-width: 769px) and (max-width: 1279px) {
   }
 
+  /* 900+ */
   @media screen and (min-width: 900px) {
     .header-hero {
       -webkit-animation: slide-in-top 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
       animation: slide-in-top 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
   }
+
 
   /* ----------------------------------------------- */
   /*      1280+ PX -- LARGER DESKTOPS & MONITORS     */
@@ -123,14 +137,21 @@
   @media screen and (min-width: 1280px) {
   }
 
-  /* 1900+ */
-  @media screen and (min-width: 1900px) and (max-width: 2560px) {
+  /* 1700-1899 */
+  @media screen and (min-width: 1700px) and (max-width: 1899px) {
     .header-hero {
-      width: 63%;
+      width: 65%;
+    }
+  }
+
+  /* 1900-2099 */
+  @media screen and (min-width: 1900px) and (max-width: 2099px) {
+    .header-hero {
+      width: 55%;
     }
   
     .header-hero-text {
-      width: 80%;
+      width: 70%;
     }
   
     .header-hero-button {
@@ -140,23 +161,28 @@
     }
   }
 
-  @media screen and (width: 2560px) {
+  /* 2100-2299 */
+  @media screen and (min-width: 2100px) and (max-width: 2299px) {
     .header-hero {
-      width: 30%;
+      width: 50%;
     }
-  
+
     .header-hero-text {
-      margin-top: -1.5rem;
-
-      width: 75%;
+      width: 60%;
     }
-  
-    .header-hero-button {
-      justify-content: center;
-      
-      margin: auto;
+  }
 
-      font-size: 1.75rem;
+  /* 2300-2499 */
+  @media screen and (min-width: 2300px) and (max-width: 2499px) {
+    .header-hero {
+      width: 50%;
+    }
+  }
+
+  /* 2500-2560 */
+  @media screen and (min-width: 2500px) and (max-width: 2560px) {
+    .header-hero {
+      width: 40%;
     }
   }
 

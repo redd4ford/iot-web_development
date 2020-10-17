@@ -5,6 +5,7 @@
   /* ----------------------------------------------- */
   /*     COMMON FOR ALL SIZES - IF NOT OVERRIDEN     */
 
+  
   @media screen and (min-width: 0px) {
     .clients-panel {
       display: flex;
