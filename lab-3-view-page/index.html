@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>doors CRUD</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!--   ADD   -->
+  <summary><strong>Add new door</strong></summary><br>
+  <form action="javascript:void(0);" method="POST" onsubmit="app.Add()">
+    <label for="price">Price: </label>
+    <input type="text" id="add-price" placeholder="Enter price" required><br>
+    <label for="producer">Producer: </label>
+    <input type="text" id="add-producer" placeholder="Enter producer" required><br>
+    <label for="wood">Wood type: </label>
+    <select id="add-woodtype" placeholder="Choose wood type..." required>
+      <option value="MAHOGANY">MAHOGANY</option>
+      <option value="OAK">OAK</option>
+      <option value="CEDAR">CEDAR</option>
+      <option value="PINE">PINE</option>
+    </select><br>
+    <label for="color">Color: </label>
+    <select class="form-control" id="add-color" placeholder="Choose color..." required>
+      <option value="RED">RED</option>
+      <option value="BLUE">BLUE</option>
+      <option value="BLACK">BLACK</option>
+      <option value="WHITE">WHITE</option>
+    </select><br>
+    <label for="height">Height (cm): </label>
+    <input type="text" id="add-height" placeholder="Enter height" required><br>
+    <label for="height">Weight (kg): </label>
+    <input type="text" id="add-weight" placeholder="Enter weight" required><br>
+
+    <input type="submit" value="Add">
+  </form>
+  
+  <!--   EDIT   -->
+
+  <div id="edit-spoiler" role="aria-hidden">
+    <br><summary><strong>Edit door</strong></summary><br>
+    <form action="javascript:void(0);" method="POST" id="saveEdit">
+      <label for="price">Price: </label>
+      <input type="text" id="edit-price" placeholder="Enter price"><br>
+      <label for="producer">Producer: </label>
+      <input type="text" id="edit-producer" placeholder="Enter producer"><br>
+      <label for="wood">Wood type: </label>
+      <select id="edit-woodtype" placeholder="Choose wood type..." required>
+        <option value="MAHOGANY">MAHOGANY</option>
+        <option value="OAK">OAK</option>
+        <option value="CEDAR">CEDAR</option>
+        <option value="PINE">PINE</option>
+      </select><br>
+      <label for="color">Color: </label>
+      <select class="form-control" id="edit-color" placeholder="Choose color..." required>
+        <option value="RED">RED</option>
+        <option value="BLUE">BLUE</option>
+        <option value="BLACK">BLACK</option>
+        <option value="WHITE">WHITE</option>
+      </select><br>
+      <label for="height">Height (cm): </label>
+      <input type="text" id="edit-height" placeholder="Enter height"><br>
+      <label for="height">Weight (kg): </label>
+      <input type="text" id="edit-weight" placeholder="Enter weight"><br>
+
+      <input type="submit" value="Edit" /> <button onclick="app.CloseInput()">Cancel</button>
+    </form>
+  </div>
+
+  <!--   SEARCH   -->
+  
+  <div style="margin-top: 30px;">
+    <form action="javascript:void(0);" method="POST" id="search-by-producer" onsubmit="app.SearchByProducer()">
+      <input type="text" id="search-producer" placeholder="Search by producer...">
+      <input type="submit" id="search-button" value="Search">
+      <label for="sort">
+        <input type="button" id="bubble-sort" onclick="app.BubbleSortByPrice()" value="Sort by price" />
+    </label>
+      <button onclick="app.StopSearch()">Cancel</button>
+    </form>
+  </div>
+
+  <!--   COUNTERS   -->
+
+  <p id="counter">
+  </p>
+
+  <p id="total-price-counter">
+  </p>
+
+  <p id="ukrainian-products-counter">
+  </p>
+
+  <div id="clear-spoiler" role="aria-hidden">
+    <button onclick="app.Clear()">Clear</button>
+  </div>
+
+  <!--   DISPLAY   -->
+
+  <table>
+    <tr>
+      <th>List of doors</th>
+    </tr>
+      <tbody id="doors">
+      </tbody>
+  </table>
+
+  <script src="js/index.js"></script>
+</body>
+</html>
