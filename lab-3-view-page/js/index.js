@@ -1,4 +1,5 @@
 var app = new function() {
+
   this.el = document.getElementById('doors');
 
   this.doors = [];
@@ -7,6 +8,14 @@ var app = new function() {
 
   this.sortTriggered = false;
   this.searchTriggered = false;
+
+
+  //                                          //
+  //                 COUNTERS                 //
+  //                                          //
+
+
+  // COUNT ALL ITEMS
 
   this.Count = function(data) {
     var el   = document.getElementById('counter');
@@ -27,6 +36,10 @@ var app = new function() {
     }
   };
 
+  //////////////////////////////////////////////
+
+  // COUNT TOTAL PRICE OF ALL ITEMS
+
   this.CountPrice = function(array) {
     var el   = document.getElementById('total-price-counter');
     var totalPrice = 0;
@@ -37,6 +50,10 @@ var app = new function() {
     }
     el.innerHTML = 'Total price: ' + totalPrice;
   };
+
+  //////////////////////////////////////////////
+
+  // COUNT TOTAL AMOUNT OF ITEMS PRODUCED BY UKRAINE
 
   this.CountUkrainianProducts = function(array) {
     var el   = document.getElementById('ukrainian-products-counter');
@@ -51,12 +68,15 @@ var app = new function() {
     el.innerHTML = 'Total amount of Ukrainian products: ' + counter;
   };
 
-  this.Clear = function() {
-    window.localStorage.clear();
-    location.reload();
-    this.searchTriggered = false;
-  };
-  
+  //////////////////////////////////////////////
+
+  //                                          //
+  //                   CRUD                   //
+  //                                          //
+
+
+  // READ ALL ITEMS
+
   this.FetchAll = function() {
     var data = '';
     var array = [];
@@ -86,16 +106,23 @@ var app = new function() {
 
     if (array.length > 0) {
       for (i = 0; i < array.length; i++) {
-        data += '<tr>';
-        data += '<td>' + (i+1) + '   Price: ' + array[i].price + '   </td>';
-        data += '<td>   Producer: ' + array[i].producer + '   </td>';
-        data += '<td>   Wood Type: ' + array[i].woodType + '   </td>';
-        data += '<td>   Color: ' + array[i].color + '   </td>';
-        data += '<td>   Height: ' + array[i].height + '   </td>';
-        data += '<td>   Weight: ' + array[i].weight + '   </td>';
-        data += '<td><button onclick="app.Edit(' + i + ')">Edit</button></td>';
-        data += '<td><button onclick="app.Delete(' + i + ')">Delete</button></td>';
-        data += '</tr>';
+        data += `<div class="col-md-4">
+        <div id="${i}" class="card mb-4 box-shadow item-card text-center">
+          <div class="card-body" style="margin: auto;">
+            <img src="img/placeholder-200x200.jpg" />
+            <h5 class="card-title"><strong>${array[i].price} UAH</strong></h5>
+            <p class="card-text">Producer: ${array[i].producer}<br>
+              Material: ${array[i].woodType} | Color: ${array[i].color}<br>
+              Height (cm): ${array[i].height} | Weight (kg): ${array[i].weight}<br></p>
+              <p class="card-text" style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend cursus
+              nibh, dignissim interdum tortor fermentum nec.</p>
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-dark" onclick="app.Edit(${i})">Edit</button>
+              <button type="button" class="btn btn-sm btn-outline-danger" onclick="app.Delete(${i})">Remove</button>
+            </div>
+          </div>
+        </div>
+        </div>`;
       }
     }
 
@@ -110,6 +137,10 @@ var app = new function() {
 
     return this.el.innerHTML = data;
   };
+
+  //////////////////////////////////////////////
+
+  // CREATE ITEM
 
   this.Add = function () {
     price = Number(document.getElementById('add-price').value);
@@ -130,8 +161,6 @@ var app = new function() {
 
     window.localStorage.setItem("DOORS", JSON.stringify(this.doors));
 
-    // Reset input value
-
     price = '';
     producer = '';
     woodType = '';
@@ -141,6 +170,10 @@ var app = new function() {
     
     this.FetchAll();
   };
+
+  //////////////////////////////////////////////
+
+  // UPDATE ITEM
 
   this.Edit = function (item) {
     price = document.getElementById('edit-price');
@@ -162,16 +195,12 @@ var app = new function() {
 
     document.getElementById('saveEdit').onsubmit = function() {
 
-        // Get value
-
         price = Number(document.getElementById('edit-price').value);
         producer = document.getElementById('edit-producer').value;
         woodType = document.getElementById('edit-woodtype').value;
         color = document.getElementById('edit-color').value;
         height = Number(document.getElementById('edit-height').value);
         weight = Number(document.getElementById('edit-weight').value);
-
-        // Edit value
 
         self.doors[item] = {
             price: price,
@@ -189,8 +218,26 @@ var app = new function() {
     }
   };
 
-  this.SearchByProducer = function() {
+  //////////////////////////////////////////////
 
+  // DELETE ITEM
+
+  this.Delete = function (item) {
+    this.doors.splice(item, 1);
+    window.localStorage.setItem("DOORS", JSON.stringify(this.doors));
+    this.FetchAll();
+  };
+
+  //////////////////////////////////////////////
+
+  //                                          //
+  //                   UTIL                   //
+  //                                          //
+
+
+  // SEARCH (FILTER) BY PRODUCER
+
+  this.SearchByProducer = function() {
     producer = document.getElementById('search-producer').value;
     this.searchTriggered = false;
 
@@ -209,6 +256,10 @@ var app = new function() {
     this.FetchAll();
     this.searchTriggered = false;
   };
+
+  //////////////////////////////////////////////
+
+  // SORT (BUBBLE) BY PRICE
 
   this.BubbleSortByPrice = function() {
     this.sortedByPrice = this.doors;
@@ -235,13 +286,20 @@ var app = new function() {
     
   };
 
-  this.Delete = function (item) {
-    // Delete the current row
-    this.doors.splice(item, 1);
-    window.localStorage.setItem("DOORS", JSON.stringify(this.doors));
-    // Display the new list
-    this.FetchAll();
+  //////////////////////////////////////////////
+
+  // CLEAR THE LIST
+
+  this.Clear = function() {
+    window.localStorage.clear();
+    location.reload();
+    this.searchTriggered = false;
   };
+
+  //////////////////////////////////////////////
+
+  // CLOSE EDIT
+
   
   this.CloseInput = function() {
     document.getElementById('edit-spoiler').style.display = 'none';
@@ -252,6 +310,20 @@ var app = new function() {
     this.filteredByProducer = [];
     window.localStorage.removeItem("FILTERED");
   };
+
+  //////////////////////////////////////////////
+
+  // DISPLAY ADD FORM
+
+  this.DisplayAddForm = function() {
+    if (document.getElementById('add-form').style.display === 'none') {
+      document.getElementById('add-form').style.display = 'block';
+    } else {
+      document.getElementById('add-form').style.display = 'none';
+    }
+  };
+
+  //////////////////////////////////////////////
 
 };
 
