@@ -13,3 +13,7 @@ input[type='submit'], button {
 #search-by-producer {
   display: none;
 }
+
+#add-form {
+  display: none;
+}
