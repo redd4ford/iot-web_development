@@ -1,0 +1,9 @@
+main {
+    margin-top: 2rem;
+}
+
+.hero-text {
+    max-width: 50%;
+    margin: auto;
+    margin-bottom: 2rem;
+}
