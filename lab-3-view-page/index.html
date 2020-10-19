@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>DOORS | View Page</title>
+  <meta name="description" content="A simple view page with CRUD">
+  <meta name="author" content="Viktoriia Yehorova / 2020">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+  integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+  crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+  integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+  crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<header>
+  <div class="navbar navbar-dark bg-dark box-shadow">
+    <div class="container d-flex justify-content-between">
+      <a href="#" class="navbar-brand justify-content-between align-items-center">
+        <svg width="1.5rem" height="1.5rem" viewBox="0 0 16 16" class="bi bi-door-open-fill" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15H1.5zM11 2v13h1V2.5a.5.5 0 0 0-.5-.5H11zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z"/>
+          </svg>
+        <strong>View Page</strong>
+      </a>
+    
+    <!--   HEADER NAV   -->
+
+    <div class="btn-group" role="group">
+      <a href="#" class="btn btn-outline-light"><svg width="0.95em" height="0.95em" viewBox="0 0 16 16" class="bi bi-info-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+      </svg> ABOUT US</a>
+      <a href="#" class="btn btn-outline-light"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+        <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+      </svg> HOME</a>
+      <a href="#" class="btn btn-outline-light"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bag-check-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M5.5 3.5a2.5 2.5 0 0 1 5 0V4h-5v-.5zm6 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+      </svg> Cart</a>
+    </div>
+    </div>
+
+  </div>
+</header>
+
+<body>
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="display-7">DOORS</h1>
+      <p class="lead" style="max-width: 50%; margin: auto; margin-bottom: 2rem;">
+        The cheapest doors in the whole world! They're so cheap you won't believe
+        it! And other Lorem Ipsum stuff that is pretty boring but I'm trying to be a
+        professional designer. Long story short,
+        <br><br><strong>Buy one of those pretty doors already.</strong>
+      </p>
+
+      <!--   SEARCH   -->
+
+      <div>
+        <form class="form-inline" action="javascript:void(0);" method="POST" id="search-by-producer" onsubmit="app.SearchByProducer()" style="max-width: 50%; margin: auto;">
+          <input id="search-producer" class="form-control" type="text" placeholder="Search by producer...">
+          <div style="display: flex; justify-content: flex-end;">
+            <input class="btn btn-dark my-2 my-md-3" type="submit" id="search-button" value="Search" style="margin-right: 5px;">
+            <button class="btn btn-outline-dark my-2 my-md-3" onclick="app.StopSearch()" style="margin-right: 5px;">Cancel</button>
+            <input class="btn btn-outline-danger my-2 my-md-3" type="button" id="bubble-sort" onclick="app.BubbleSortByPrice()" value="Sort by price" />
+          </div>
+        </form>
+            <div>
+              <button class="btn btn-dark my-2 my-md-3" onclick="app.DisplayAddForm()">Add new</button>
+            </div>
+      </div>
+      </p>
+      <hr/>
+
+    
+
+  <!--   ADD   -->
+
+  <div id="add-form" style="width: 50%; margin: auto; margin-bottom: 20px;">
+    <h1>Add new door</h1><br>
+    <form action="javascript:void(0);" method="POST" onsubmit="app.Add()">
+      <div class="row">
+        <div class="col-sm-3">
+          <label for="price">PRICE</label>
+          <input class="form-control" type="text" id="add-price" placeholder="Enter price" required>
+        </div>
+        <div class="col-sm">
+          <label for="producer">PRODUCER</label>
+          <input class="form-control" type="text" id="add-producer" placeholder="Enter producer" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <label for="wood">WOOD TYPE</label>
+          <select class="form-control" id="add-woodtype" placeholder="Choose wood type..." required>
+            <option value="MAHOGANY">MAHOGANY</option>
+            <option value="OAK">OAK</option>
+            <option value="CEDAR">CEDAR</option>
+            <option value="PINE">PINE</option>
+          </select>
+        </div>
+        <div class="col-sm-3">
+          <label for="color">COLOR</label>
+          <select class="form-control" id="add-color" placeholder="Choose color..." required>
+            <option value="RED">RED</option>
+            <option value="BLUE">BLUE</option>
+            <option value="BLACK">BLACK</option>
+            <option value="WHITE">WHITE</option>
+          </select>
+        </div>
+        <div class="col-sm">
+          <label for="height">HEIGHT (cm)</label>
+          <input class="form-control" type="text" id="add-height" placeholder="Enter height" required><br>
+          <label for="height">WEIGHT (kg)</label>
+          <input class="form-control" type="text" id="add-weight" placeholder="Enter weight" required><br>
+        </div>
+      </div>
+      
+      <div style="margin-top: 2rem;">
+        <input type="submit" class="btn btn-dark" value="Submit" onclick="app.DisplayAddForm()" />
+        <input type="reset" class="btn btn-outline-dark" value="Reset" />
+      </div>
+    </form>
+  </div>
+  
+  <!--   EDIT   -->
+
+  <div id="edit-spoiler" role="aria-hidden" style="width: 50%; margin: auto; margin-bottom: 20px;">
+    <h1>Edit door</h1><br>
+    <form action="javascript:void(0);" method="POST" id="saveEdit">
+      <div class="row">
+        <div class="col-sm-3">
+          <label for="price">PRICE</label>
+          <input class="form-control" type="text" id="edit-price" placeholder="Enter price" required>
+        </div>
+        <div class="col-sm">
+          <label for="producer">PRODUCER</label>
+          <input class="form-control" type="text" id="edit-producer" placeholder="Enter producer" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <label for="wood">WOOD TYPE</label>
+          <select class="form-control" id="edit-woodtype" placeholder="Choose wood type..." required>
+            <option value="MAHOGANY">MAHOGANY</option>
+            <option value="OAK">OAK</option>
+            <option value="CEDAR">CEDAR</option>
+            <option value="PINE">PINE</option>
+          </select>
+        </div>
+        <div class="col-sm-3">
+          <label for="color">COLOR</label>
+          <select class="form-control" id="edit-color" placeholder="Choose color..." required>
+            <option value="RED">RED</option>
+            <option value="BLUE">BLUE</option>
+            <option value="BLACK">BLACK</option>
+            <option value="WHITE">WHITE</option>
+          </select>
+        </div>
+        <div class="col-sm">
+          <label for="height">HEIGHT (cm)</label>
+          <input class="form-control" type="text" id="edit-height" placeholder="Enter height" required><br>
+          <label for="height">WEIGHT (kg)</label>
+          <input class="form-control" type="text" id="edit-weight" placeholder="Enter weight" required><br>
+        </div>
+      </div>
+      
+      <div style="margin-top: 2rem;">
+        <input type="submit" class="btn btn-dark" value="Edit" />
+        <button class="btn btn-outline-dark" onclick="app.CloseInput()">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <!--   COUNTERS   -->
+
+  <div class="jumbotron bg-dark" style="padding-bottom: 5px; max-width: 50%; color: white; margin: auto;">
+
+    <!--   ITEMS COUNTER   -->
+
+    <p id="counter">
+    </p>
+
+    <!--   TOTAL PRICE COUNTER   -->
+
+    <p id="total-price-counter">
+    </p>
+
+    <!--   UKRAINIAN PRODUCTS COUNTER   -->
+
+    <p id="ukrainian-products-counter">
+    </p>
+
+  </div>
+
+  <div id="clear-spoiler" role="aria-hidden">
+    <button class="btn btn-dark my-2 my-md-3" onclick="app.Clear()">Clear</button>
+  </div>
+
+
+  <!--   DISPLAY   -->
+
+  <div class="album py-5 bg-light" style="width: 85%; margin: auto; margin-top: 30px; border: 1px #c2c2c2; border-radius: 5px;">
+    <div class="container">
+
+      <div id="doors" class="row">
+        
+      </div>
+      
+    </div>
+  </div>
+
+  <script src="js/index.js"></script>
+</body>
+</html>

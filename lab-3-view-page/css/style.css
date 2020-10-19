@@ -1,0 +1,19 @@
+input[type='submit'], button {
+  cursor: pointer;
+}
+
+#edit-spoiler {
+  display: none;
+}
+
+#clear-spoiler {
+  display: none;
+}
+
+#search-by-producer {
+  display: none;
+}
+
+#add-form {
+  display: none;
+}
