@@ -243,7 +243,7 @@ var app = new function() {
 
     if (producer) {
       for (i = 0; i < this.doors.length; i++) {
-        if (this.doors[i].producer === producer) {
+        if (this.doors[i].producer.toUpperCase() === producer.toUpperCase()) {
           this.filteredByProducer.push(this.doors[i]);
           window.localStorage.setItem("FILTERED", JSON.stringify(this.filteredByProducer));
         }
@@ -282,8 +282,7 @@ var app = new function() {
 
     this.sortTriggered = true;
     this.FetchAll();
-    this.sortTriggered = false;
-    
+    this.sortTriggered = false;  
   };
 
   //////////////////////////////////////////////
@@ -322,6 +321,54 @@ var app = new function() {
       document.getElementById('add-form').style.display = 'none';
     }
   };
+
+  //////////////////////////////////////////////
+
+  // ADD FORM DATA VALIDATION
+
+  document.getElementById('add-form').addEventListener('invalid', (function () {
+    return function (e) {
+      e.preventDefault();
+      var modal = document.getElementById('add-modal');
+      var span = document.getElementsByClassName('close')[0];
+      
+      modal.style.display = 'block';
+      
+      span.onclick = function() {
+        modal.style.display = 'none';
+      }
+
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = 'none';
+        }
+      }
+    };
+  })(), true);
+
+  //////////////////////////////////////////////
+
+  // EDIT FORM DATA VALIDATION
+
+  document.getElementById('edit-spoiler').addEventListener('invalid', (function () {
+    return function (e) {
+      e.preventDefault();
+      var modal = document.getElementById('edit-modal');
+      var span = document.getElementsByClassName('close')[0];
+      
+      modal.style.display = 'block';
+      
+      span.onclick = function() {
+        modal.style.display = 'none';
+      }
+
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = 'none';
+        }
+      }
+    };
+  })(), true);
 
   //////////////////////////////////////////////
 
