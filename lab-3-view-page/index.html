@@ -89,17 +89,18 @@
       <div class="row">
         <div class="col-sm-3">
           <label for="price">PRICE</label>
-          <input class="form-control" type="text" id="add-price" placeholder="Enter price" required>
+          <input class="form-control" type="number" id="add-price" placeholder="Enter price" required min="1" max="500" step="1.5" value="40">
         </div>
         <div class="col-sm">
           <label for="producer">PRODUCER</label>
-          <input class="form-control" type="text" id="add-producer" placeholder="Enter producer" required>
+          <input class="form-control" type="text" id="add-producer" placeholder="Enter producer" required minlength="3" maxlength="30">
         </div>
       </div>
       <div class="row">
         <div class="col-sm-3">
           <label for="wood">WOOD TYPE</label>
           <select class="form-control" id="add-woodtype" placeholder="Choose wood type..." required>
+            <option value="" disabled selected>Select wood type</option>
             <option value="MAHOGANY">MAHOGANY</option>
             <option value="OAK">OAK</option>
             <option value="CEDAR">CEDAR</option>
@@ -109,6 +110,7 @@
         <div class="col-sm-3">
           <label for="color">COLOR</label>
           <select class="form-control" id="add-color" placeholder="Choose color..." required>
+            <option value="" disabled selected>Select color</option>
             <option value="RED">RED</option>
             <option value="BLUE">BLUE</option>
             <option value="BLACK">BLACK</option>
@@ -117,16 +119,27 @@
         </div>
         <div class="col-sm">
           <label for="height">HEIGHT (cm)</label>
-          <input class="form-control" type="text" id="add-height" placeholder="Enter height" required><br>
+          <input class="form-control" type="number" id="add-height" placeholder="Enter height" required min="200" max="300" step="5"><br>
           <label for="height">WEIGHT (kg)</label>
-          <input class="form-control" type="text" id="add-weight" placeholder="Enter weight" required><br>
+          <input class="form-control" type="number" id="add-weight" placeholder="Enter weight" required min="20" max="60" step="2"><br>
         </div>
       </div>
       
       <div style="margin-top: 2rem;">
-        <input type="submit" class="btn btn-dark" value="Submit" onclick="app.DisplayAddForm()" />
+        <input id="add-button" type="submit" class="btn btn-dark" value="Submit" />
         <input type="reset" class="btn btn-outline-dark" value="Reset" />
       </div>
+
+      <div id="add-modal" class="modal">
+
+        <!--   Modal content   -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Oops! Something went wrong. Please try again.</p>
+        </div>
+      
+      </div>
+
     </form>
   </div>
   
@@ -138,11 +151,11 @@
       <div class="row">
         <div class="col-sm-3">
           <label for="price">PRICE</label>
-          <input class="form-control" type="text" id="edit-price" placeholder="Enter price" required>
+          <input class="form-control" type="number" id="edit-price" placeholder="Enter price" required min="1" max="500" step="1.5" value="40">
         </div>
         <div class="col-sm">
           <label for="producer">PRODUCER</label>
-          <input class="form-control" type="text" id="edit-producer" placeholder="Enter producer" required>
+          <input class="form-control" type="text" id="edit-producer" placeholder="Enter producer" required minlength="3" maxlength="30">
         </div>
       </div>
       <div class="row">
@@ -166,16 +179,27 @@
         </div>
         <div class="col-sm">
           <label for="height">HEIGHT (cm)</label>
-          <input class="form-control" type="text" id="edit-height" placeholder="Enter height" required><br>
+          <input class="form-control" type="number" id="edit-height" placeholder="Enter height" required min="200" max="300" step="5"><br>
           <label for="height">WEIGHT (kg)</label>
-          <input class="form-control" type="text" id="edit-weight" placeholder="Enter weight" required><br>
+          <input class="form-control" type="number" id="edit-weight" placeholder="Enter weight" required min="20" max="60" step="2"><br>
         </div>
       </div>
       
       <div style="margin-top: 2rem;">
-        <input type="submit" class="btn btn-dark" value="Edit" />
+        <input id="edit-button" type="submit" class="btn btn-dark" value="Edit" />
         <button class="btn btn-outline-dark" onclick="app.CloseInput()">Cancel</button>
       </div>
+
+      <div id="edit-modal" class="modal">
+
+        <!--   Modal content   -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Oops! Something went wrong. Please try again.</p>
+        </div>
+      
+      </div>
+
     </form>
   </div>
 
