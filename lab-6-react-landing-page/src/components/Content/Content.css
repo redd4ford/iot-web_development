@@ -1,0 +1,22 @@
+    .content-block {
+        margin: auto;
+        margin-top: 45px;
+        background-color: rgb(255, 255, 244);
+        width: 62%;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        -webkit-box-shadow: 1px 1px 16px -4px rgba(0,0,0,0.25);
+        -moz-box-shadow: 1px 1px 16px -4px rgba(0,0,0,0.25);
+        box-shadow: 1px 1px 16px -4px rgba(0,0,0,0.25);
+    }
+
+    .tiles {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 98%;
+        margin-top: 10px;
+    }

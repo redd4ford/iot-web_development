@@ -1,0 +1,36 @@
+   .navbar-container {
+    margin: auto;
+    background-color: rgb(255, 255, 244);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 75px;
+    width: 62%;
+    margin-bottom: 45px;
+    -webkit-box-shadow: 1px 1px 16px -4px rgba(0,0,0,0.25);
+    -moz-box-shadow: 1px 1px 16px -4px rgba(0,0,0,0.25);
+    box-shadow: 1px 1px 16px -4px rgba(0,0,0,0.25);
+  }
+
+  .navbar-container ul {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: auto;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .navbar-container ul li a:link, a:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(85, 85, 85);
+  }
+
+  .navbar-container ul li a:hover {
+    color: rgb(34, 34, 34);
+  }
+  
