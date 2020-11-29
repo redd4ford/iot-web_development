@@ -1,0 +1,48 @@
+    .content-block {
+        margin: auto;
+        margin-top: 45px;
+        background-color: rgb(255, 255, 244);
+        width: 62%;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        -webkit-box-shadow: 1px 1px 16px -4px rgba(0,0,0,0.25);
+        -moz-box-shadow: 1px 1px 16px -4px rgba(0,0,0,0.25);
+        box-shadow: 1px 1px 16px -4px rgba(0,0,0,0.25);
+    }
+
+    .tiles {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 98%;
+        margin-top: 10px;
+    }
+
+    .grid-list {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        display: inline-grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    .view-more-button {
+        margin-bottom: 50px;
+    }
+    
+    .view-more-button button {
+        font-size: 1em;
+        margin: 1em;
+        padding: 0.75em 2em;
+        background: rgb(34, 34, 34);
+        color: white;
+        border: 2px solid rgb(34, 34, 34);
+        border-radius: 3px;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
