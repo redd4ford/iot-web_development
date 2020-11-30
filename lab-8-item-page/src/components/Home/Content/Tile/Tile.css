@@ -1,0 +1,29 @@
+    .tile {
+        width: 300px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        -webkit-box-shadow: 1px 1px 16px -4px rgba(0,0,0,0.25);
+        -moz-box-shadow: 1px 1px 16px -4px rgba(0,0,0,0.25);
+        box-shadow: 1px 1px 16px -4px rgba(0,0,0,0.25);
+        margin-bottom: 40px;
+        border-radius: 5px;
+    }
+
+    .tile-description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: rgb(34, 34, 34);
+    }
+
+    .tile-description h3 {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .tile-description p {
+        text-align: center;
+        width: 75%;
+    }

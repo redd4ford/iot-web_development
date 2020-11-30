@@ -1,0 +1,39 @@
+.filters {
+    margin: auto;
+    background-color: rgb(255, 255, 244);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 75px;
+    margin-top: 45px;
+    -webkit-box-shadow: 1px 1px 16px -4px rgba(0,0,0,0.25);
+    -moz-box-shadow: 1px 1px 16px -4px rgba(0,0,0,0.25);
+    box-shadow: 1px 1px 16px -4px rgba(0,0,0,0.25);
+}
+
+.filters input[type=text], input[type=number], select {
+    padding: 10px;
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 5px;
+    margin-right: 5px;
+    font-size: 14px;
+    width: 75%;
+}
+
+.filters input[type=number] {
+    width: 50%;
+}
+
+.filters select {
+    width: 35%;
+}
+
+.filter {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
