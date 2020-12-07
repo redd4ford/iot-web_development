@@ -1,0 +1,12 @@
+.item-view-more {
+    padding: 0.25em 0.25em;
+
+    color: rgb(44, 44, 44);
+    background: white;
+    border: 2px solid rgb(44, 44, 44);
+    border-radius: 3px;
+
+    font-size: 1em;
+    
+    cursor: pointer;
+}
