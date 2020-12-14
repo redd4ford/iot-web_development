@@ -1,0 +1,26 @@
+.hero-container {
+    height: 625px;
+    width: 940px;
+    margin: auto;
+
+    background-image: linear-gradient( rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.55) ), url('../../../../img/header.jpg');
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 16px -4px rgba(0,0,0,0.25);
+    -moz-box-shadow: 1px 1px 16px -4px rgba(0,0,0,0.25);
+    box-shadow: 1px 1px 16px -4px rgba(0,0,0,0.25);
+}
+
+.hero-container h1 {
+    position: relative;
+    right: -28%;
+    bottom: -75%;
+
+    color: white;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 55px;
+    text-shadow: 1.5px 1.5px 1.5px black;
+    letter-spacing: 2px;
+}
