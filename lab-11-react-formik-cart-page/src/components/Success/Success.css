@@ -1,0 +1,25 @@
+.success-text {
+    margin: 0;
+    text-align: center;
+}
+
+.success-text h1 {
+    margin-top: 20px;
+}
+
+.go-back-button {
+    margin-bottom: 50px;
+}
+
+.go-back-button button {
+    margin: 1em;
+    padding: 0.75em 2em;
+
+    color: white;
+    background: rgb(34, 34, 34);
+    border: 2px solid rgb(34, 34, 34);
+    border-radius: 3px;
+
+    font-size: 1em;
+    cursor: pointer;
+}
