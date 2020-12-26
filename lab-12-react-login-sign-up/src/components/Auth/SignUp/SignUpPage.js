@@ -1,6 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 import "./SignUpPage.css";
 
@@ -136,6 +136,7 @@ export default function SignUpPage() {
                         </div>
                     
                         <div className="button">
+                          <Link to='/auth/login'>I have an account. Let me log in!</Link>
                           <button
                             type="submit"
                             className={"signup-form-submit"}

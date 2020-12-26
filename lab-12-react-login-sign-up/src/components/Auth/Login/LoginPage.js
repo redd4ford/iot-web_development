@@ -1,8 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import "./LoginPage.css";
-import { useHistory } from "react-router-dom";
-import { toast, Toaster } from 'react-hot-toast';
+import { useHistory, Link } from "react-router-dom";
 
 export default function LoginPage(props) {
 
@@ -97,6 +96,7 @@ export default function LoginPage(props) {
                             </div>
                     
                         <div className="button">
+                          <Link to='/auth/signup'>I don't have an account.</Link>
                           <button
                             type="submit"
                             className={"checkout-form-submit"}

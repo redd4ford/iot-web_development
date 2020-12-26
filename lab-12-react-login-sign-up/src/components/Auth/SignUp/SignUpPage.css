@@ -85,6 +85,15 @@
     margin-left: 5px;
 }
 
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    margin: auto;
+    width: 30%;
+}
+
 .signup-form-submit {
     padding: 0.45em 1em;
 
