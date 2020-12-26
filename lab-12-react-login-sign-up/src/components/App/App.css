@@ -1,0 +1,19 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  
+  background: rgb(243, 243, 233);
+}
+
+.total-amount {
+  color: white;
+  background:  rgb(34, 34, 34);
+  border: 2px solid  rgb(34, 34, 34);
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+  border-radius: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+}

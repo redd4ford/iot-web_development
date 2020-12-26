@@ -1,0 +1,125 @@
+.info-block {
+    margin: auto;
+    margin-top: 45px;
+    background-color: rgb(255, 255, 244);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    -webkit-box-shadow: 1px 1px 16px -4px rgba(0,0,0,0.25);
+    -moz-box-shadow: 1px 1px 16px -4px rgba(0,0,0,0.25);
+    box-shadow: 1px 1px 16px -4px rgba(0,0,0,0.25);
+}
+
+.go-back {
+    margin-top: 20px;
+    width: 90%;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.go-back a {
+    font-size: large;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(119, 119, 119);
+}
+
+.go-back a:link, a:hover {
+    color: rgb(70, 70, 70);
+}
+
+.go-back hr {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    color: rgb(238, 238, 238);
+}
+
+.go-back {
+    color: rgb(119, 119, 119);
+}
+
+.img-big img {
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 16px -4px rgba(0,0,0,0.15);
+    -moz-box-shadow: 1px 1px 16px -4px rgba(0,0,0,0.15);
+    box-shadow: 1px 1px 16px -4px rgba(0,0,0,0.15);
+}
+
+.item-info-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.item-info-price {
+    background: rgb(22, 22, 22);;
+    border-radius: 5px;
+    color: white;
+    height: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.item-info-parameters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.item-info-key {
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 800;
+}
+
+.item-info hr {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 75%;
+}
+
+.item-info-text {
+    margin: auto;
+    width: 75%;
+    text-align: justify;
+}
+
+.purchase-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    margin-top: 20px;
+}
+
+.purchase-button button {
+    width: 75%;
+
+    background: rgb(22, 22, 22);
+
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
