@@ -1,0 +1,109 @@
+.signup-block {
+    width: 62%;
+    display: flex;
+    flex-direction: column;
+
+    margin: auto;
+    margin-top: 45px;
+
+    background-color: rgb(255, 255, 244);
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 16px -4px rgba(0,0,0,0.25);
+    -moz-box-shadow: 1px 1px 16px -4px rgba(0,0,0,0.25);
+    box-shadow: 1px 1px 16px -4px rgba(0,0,0,0.25);
+}
+
+.signup-block h1, h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.signup-block h2 {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.signup-errors-container {
+    margin: auto;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 75%;
+    background-color: rgb(255, 178, 169);
+    color: rgb(85, 8, 0);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-form-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-form-input label {
+    margin-left: 0.5em;
+
+    font-weight: bold;
+}
+
+.signup-form-input input[type=text], .signup-form-input input[type=password] {
+    padding: 10px;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 5px;
+
+    font-size: 14px;
+}
+
+.signup-form-input-error input[type=text], .signup-form-input-error input[type=password] {
+    border: 1px solid rgb(219, 85, 85);
+}
+
+.signup-form-one {
+    margin: auto;
+    width: 30%;
+}
+
+.signup-form-checkbox {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.signup-form-checkbox label {
+    margin-left: 5px;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    margin: auto;
+    width: 30%;
+}
+
+.signup-form-submit {
+    padding: 0.45em 1em;
+
+    color: white;
+    background: rgb(34, 34, 34);
+    border: 2px solid rgb(34, 34, 34);
+
+    border-radius: 3px;
+
+    font-size: 1em;
+
+    cursor: pointer;
+}

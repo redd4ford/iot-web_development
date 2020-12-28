@@ -1,0 +1,19 @@
+.cart-item-delete {
+    padding: 0.2em 0.2em;
+    margin-top: 2px;
+    margin-left: 0.04em;
+
+    color: white;
+    background: rgb(219, 43, 43);
+    border: 2px solid rgb(219, 43, 43);
+    border-radius: 3px 0 0 3px;
+
+    font-size: 1em;
+    
+    cursor: pointer;
+}
+
+.cart-item-delete:hover {
+    background: rgb(194, 33, 33);
+    border: 2px solid rgb(194, 33, 33);
+}

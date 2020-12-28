@@ -1,0 +1,18 @@
+.cart-item-view {
+    padding: 0.2em 0.2em;
+    margin-top: 2px;
+
+    color: white;
+    background:  rgb(44, 44, 44);
+    border: 2px solid  rgb(44, 44, 44);
+    border-radius: 0 3px 3px 0;
+
+    font-size: 1em;
+    
+    cursor: pointer;
+}
+
+.cart-item-view:hover {
+    background:  rgb(34, 34, 34);
+    border: 2px solid  rgb(34, 34, 34);
+}
