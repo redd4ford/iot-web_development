@@ -1,0 +1,12 @@
+.item-purchase {
+    padding: 0.25em 0.25em;
+
+    color: white;
+    background: rgb(44, 44, 44);
+    border: 2px solid rgb(44, 44, 44);
+    border-radius: 3px;
+
+    font-size: 1em;
+    
+    cursor: pointer;
+}
